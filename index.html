@@ -117,7 +117,7 @@
             complete: function(results) {
                 resortData = results.data;
                 if (resortData && resortData.length > 0) {
-                    document.getElementById('status').innerText = "✅ 同步成功！";
+                    document.getElementById('status').innerText = "";
                     updateTicketSelectors(); 
                 }
             }

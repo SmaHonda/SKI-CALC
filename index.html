@@ -52,7 +52,7 @@
     <div class="max-w-6xl mx-auto">
         <header class="mb-8 text-center">
             <h1 class="text-3xl font-bold text-slate-800">⛷️ 最強スキー計画クン</h1>
-            <p id="status" display="none" class="text-blue-500 mt-2 font-medium">正在從 Google 試算表同步數據...</p>
+            <p id="status" class="text-blue-500 mt-2 font-medium hidden">正在從 Google 試算表同步數據...</p>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
@@ -117,8 +117,8 @@
             complete: function(results) {
                 resortData = results.data;
                 if (resortData && resortData.length > 0) {
-                    document.getElementById('status').innerText = "";
-                    updateTicketSelectors(); 
+                    console.log("Data loaded successfully"); // 只有按 F12 打開開發者工具才看得到
+                    updateTicketSelectors();
                 }
             }
         });
